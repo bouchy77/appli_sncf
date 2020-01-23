@@ -15,17 +15,17 @@ spec:
     spec:
       containers:
       - name: db
-        image: bzeitouni/projet_poei_final_tgv_db:1.1
+        image: bouchy77/appli_sncf
         imagePullPolicy: Never
         env:
         - name: MYSQL_ROOT_PASSWORD
-          value: MySQL@007
+          value: test
         - name: MYSQL_DATABASE
-          value: tgv
+          value: sncf_db
         - name: MYSQL_USER
-          value: webapp
+          value: user
         - name: MYSQL_PASSWORD
-          value: Bond@007
+          value: test
         ports:
         - containerPort: 3306
           name: db
