@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: php-apache
-        image: bouchy77/appli_sncf_www
+        image: bouchy77/appli_sncf_www:1.0
         imagePullPolicy: Never
         ports:
         - containerPort: 80
