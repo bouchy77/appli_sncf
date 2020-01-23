@@ -1,5 +1,5 @@
-ELECT t.id_train, G1.nom_gare AS depart,G2.nom_gare AS arrivee,t.heure_depart,t.heure_arrivee,TIMEDIFF(t.heure_arrivee,t.heure_depart) AS duree
+SELECT t.id_train, g1.nom_gare AS depart, g2.nom_gare AS arrivee, t.heure_depart, t.heure_arrivee, TIMEDIFF(t.heure_arrivee,t.heure_depart) AS duree
 FROM train t
-INNER JOIN gare G1 ON t.id_gare_depart=G1.id_gare
-INNER JOIN gare G2 ON t.id_gare_arrivee=G2.id_gare
+INNER JOIN gare g1 ON t.id_gare_depart=g1.id_gare
+INNER JOIN gare g2 ON t.id_gare_arrivee=g2.id_gare
 ORDER BY t.`heure_depart` ASC
