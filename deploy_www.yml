@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: www
+  labels:
+    app: www
+spec:
+  selector:
+    matchLabels:
+      app: www
+  template:
+    metadata:
+      labels:
+        app: www
+    spec:
+      containers:
+      - name: php-apache
+        image: bouchy77/appli_sncf_www
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 80
+
