@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: db
-        image: bouchy77/appli_sncf
+        image: bouchy77/appli_sncf:1.0
         imagePullPolicy: Never
         env:
         - name: MYSQL_ROOT_PASSWORD
